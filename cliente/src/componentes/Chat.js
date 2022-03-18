@@ -32,27 +32,25 @@ const Chat = ({ nombre }) => {
   };
 
   return (
-    <div>
-      <div className="chat">
+    <div className="chat">
+      <div className="mensajes">
         {mensajes.map((e, i) => (
-          <div key={i}>
-            <div>{e.nombre}</div>
-            <div>{e.mensaje}</div>
-          </div>
+          !e.mensaje.includes("ha entrado en la sala") ?
+            <div key={i} className={`mensaje ${e.nombre === nombre ? "iam" : null}`}>
+              <div className="nombre">{e.nombre}</div>
+              <div>{e.mensaje}</div>
+            </div>
+            : <div>{e.mensaje}</div>
         ))}
         <div ref={divRef}></div>
       </div>
-      <form onSubmit={submit}>
-        <label htmlFor="">Escriba su mensaje</label>
+      <form onSubmit={submit} className="form">
         <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
+          cols="5"
           value={mensaje}
           onChange={(e) => setMensaje(e.target.value)}
         ></textarea>
-        <button>Enviar</button>
+        <button className="btn btn-primary">Enviar</button>
       </form>
     </div>
   );

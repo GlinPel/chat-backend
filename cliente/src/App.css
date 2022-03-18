@@ -1,7 +1,84 @@
-.chat {
-  width: 50%;
-  min-height: 50vh;
-  max-height: 50vh;
+.header{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(212, 212, 212);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border: 3px solid black;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  border: 3px solid black;
+  padding: 2rem;
+}
+
+.login h2{
+  text-align: center;
+}
+
+.form{
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.form textarea{
+  flex: 8;
+}
+
+.form button{
+  flex: 1;
+}
+
+.mensajes{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
   overflow: scroll;
+  height: 550px;
+}
+
+.mensaje{
+  background-color: rgb(194, 194, 194);
+  padding: .5rem 2rem;
+  border-radius: 10px;
+}
+
+.mensaje .nombre{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.iam{
+  align-self: flex-end;
+  background-color: rgb(152, 193, 255);
+}
+
+label{
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+input{
+  min-width: 300px;
+  padding: .3rem;
+  margin-right: 2rem;
+}
+
+.chat {
+  width: 100%;
   border: 2px solid black;
+  padding: 2rem;
+  margin-top: 2rem;
 }

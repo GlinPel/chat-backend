@@ -14,13 +14,17 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="container">
+      <div className="header">MERN Chat</div>
       {!registrado && (
-        <form onSubmit={registrar}>
-          <label htmlFor="">Introduzca su nombre</label>
-          <input value={nombre} onChange={(e) => setNombre(e.target.value)} />
-          <button>Ir al chat</button>
-        </form>
+        <div className="login">
+          <h2>Get started right now!</h2>
+          <form onSubmit={registrar}>
+            <label>I want to start chating with my name</label>
+            <input placeholder="My name" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+            <button className="btn btn-success">Start Chating</button>
+          </form>
+        </div>
       )}
 
       {registrado && <Chat nombre={nombre} />}
